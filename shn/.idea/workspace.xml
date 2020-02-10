@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e848d03-dc60-448c-83b7-deca8d21407d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/SubAccoutSQL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/SubAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/ada.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/asdasd.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/shujuguodu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/shujuguodu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Test/shujuguodu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Test/shujuguodu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shn.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../student-测试题.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../必看说明.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../必看说明.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../邵海楠-15319109070.rar" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,8 +186,16 @@
       <workItem from="1580978477065" duration="5778000" />
       <workItem from="1581302327227" duration="572000" />
       <workItem from="1581313627742" duration="13866000" />
-      <workItem from="1581329109956" duration="35000" />
+      <workItem from="1581329109956" duration="310000" />
     </task>
+    <task id="LOCAL-00001" summary="电子账户de_MST">
+      <created>1581329354328</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581329354328</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +213,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="电子账户de_MST" />
+    <option name="LAST_COMMIT_MESSAGE" value="电子账户de_MST" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
