@@ -15,11 +15,16 @@ public class SubAccoutSQL {
         List<SubAccount> subAccounts=toSubAccount(list);
         StringBuilder stringBuilder=new StringBuilder();
         for (SubAccount subAccount: subAccounts) {
+            //后面需要修改真是数据，暂时前4列就先直接从csv里面取值
+            //ACC_id
             String 内部账号="123";
-            String 内部账号序号="123";
+//            "AG_ACC_NO",就是电子账户
+            String 内部账号序号=subAccount.get电子账号();
+            //"AG_ACC_SEQN",
             String 账卡号="123";
-            String 账户序号="123";
-            String 合作机构代码="123";
+//            ACC_SEQN
+            String 账户序号=subAccount.get账户序号();
+            String 合作机构代码="770000";
             String 利率=subAccount.get利率();
             String 起息日期=subAccount.get起息日();
             String 产品号=subAccount.get产品号();
@@ -41,17 +46,18 @@ public class SubAccoutSQL {
             String 开通标志="0000000000";
             String 客户号="";
             String 账户类型="AT01";
-            String 明细笔数="";
+            String 明细笔数="0";
             String DE_MST="INSERT INTO  DE_MST (\"ACC_ID\", \"AG_ACC_NO\", \"AG_ACC_SEQN\", \"ACC_SEQN\", \"OPN_BR_NO\", \"AG_BR_NO\", \"PRDT_NO\", \"CUR_NO\", \"DE_BAL\", \"DE_BOOK_BAL\", \"DE_YS_BAL\", \"DE_RATE\", " +
                     "\"DE_HST_CNT\", \"DE_OPN_DATE\", \"DE_IC_DATE\", \"DE_LAST_DATE\", \"DE_MTR_DATE\", \"DE_ACC_STS\", \"DE_HOLD_STS\", \"DE_HOLD_AMT\", \"DE_STOP_PAY_STS\", \"DE_STOP_PAY_AMT\", \"DE_CTL_AMT\", \"DE_OD_FLAG\", \"DE_CIF_NO\", \"DE_OPEN_FLAG\"," +
                     " \"DE_MAC\", \"DE_INTS_DATE\", \"DE_CIF_LAST_DATE\", " +
                     "\"DE_RATE_TYPE\", \"DE_CASH_FLAG\", \"DE_ACC_TYPE\", \"DE_INTST\", \"DE_UNPAY_INTST\", \"DE_AMT1\", \"DE_AMT2\")\n" +
-                    " VALUES ('"+内部账号+"', '"+内部账号序号+"', '"+账卡号+"', '"+账户序号+"', '770000', '770000', '"+产品号+"', '156', '"+账户余额+"', '0', '0', '"+利率+"', " +
+                    " VALUES ('"+内部账号+"', '"+内部账号序号+"', '"+账卡号+"', '"+账户序号+"', '"+合作机构代码+"', '"+合作机构代码+"', '"+产品号+"', '156', '"+账户余额+"', '0', '0', '"+利率+"', " +
                     "'"+明细笔数+"', '"+开户时间+"', '"+起息日期+"', '"+上笔发生日期 +"', '99991231', '"+账户状态+"', '"+冻结状态+"', '"+冻结金额+"', '"+止付状态+"', '"+止付金额+"', '"+控制金额+"', '"+透支标志+"', " +
                     "'"+客户号+"', '"+开通标志+"', NULL, '"+结息日期+"', '"+最后动账日+"', 'RT00', '"+提现标识+"', '"+账户类型+"', " +
                     "'"+累计收益+"', NULL, NULL, NULL);\n";
             stringBuilder.append(DE_MST);
         }
+        //子账户表
         System.out.println(stringBuilder);
     }
 

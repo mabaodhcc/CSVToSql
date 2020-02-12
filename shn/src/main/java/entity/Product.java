@@ -7,12 +7,13 @@ public class Product {
 
     //        产品名称
     private String prdtName;
+    private String 存款类型;
     //互金产品编号
     private String prdtNo;
     //    工厂产品编号
     private String gcNo;
     //        分类
-    private String fenlei;
+    private String 产品类型;
     //        存款期
     private String de_term;
     //        存款期单位
@@ -32,7 +33,7 @@ public class Product {
     //        是否可自动转存
     private String tfr_lmt_type;
     //        是否可部分提前支取
-    private String draw_adva_flag;
+    private String draw_type;
     //机构编号
     private String brNo;
 
@@ -56,12 +57,12 @@ public class Product {
         this.prdtName = prdtName;
     }
 
-    public String getFenlei() {
-        return fenlei;
+    public String get产品类型() {
+        return 产品类型;
     }
 
-    public void setFenlei(String fenlei) {
-        this.fenlei = fenlei;
+    public void set产品类型(String 产品类型) {
+        this.产品类型 = 产品类型;
     }
 
     public String getDe_term() {
@@ -120,12 +121,12 @@ public class Product {
         this.tfr_lmt_type = tfr_lmt_type;
     }
 
-    public String getDraw_adva_flag() {
-        return draw_adva_flag;
+    public String getDraw_type() {
+        return draw_type;
     }
 
-    public void setDraw_adva_flag(String draw_adva_flag) {
-        this.draw_adva_flag = draw_adva_flag;
+    public void setDraw_type(String draw_type) {
+        this.draw_type = draw_type;
     }
 
     public Product(String chnnl, String prdtName, String prdtNo, String gcNo, String fenlei, String de_term, String de_termUnit, String opn_min_amt, String fashouqi, String fashouqiUnit, String rate, String rule, String opn_unit_amt, String tfr_lmt_type, String draw_adva_flag, String brNo) {
@@ -133,7 +134,7 @@ public class Product {
         this.prdtName = prdtName;
         this.prdtNo = prdtNo;
         this.gcNo = gcNo;
-        this.fenlei = fenlei;
+        this.产品类型 = fenlei;
         this.de_term = de_term;
         this.de_termUnit = de_termUnit;
         this.opn_min_amt = opn_min_amt;
@@ -143,7 +144,7 @@ public class Product {
         this.rule = rule;
         this.opn_unit_amt = opn_unit_amt;
         this.tfr_lmt_type = tfr_lmt_type;
-        this.draw_adva_flag = draw_adva_flag;
+        this.draw_type = draw_adva_flag;
         this.brNo = brNo;
     }
 
@@ -154,7 +155,7 @@ public class Product {
                 ", prdtName='" + prdtName + '\'' +
                 ", prdtNo='" + prdtNo + '\'' +
                 ", gcNo='" + gcNo + '\'' +
-                ", fenlei='" + fenlei + '\'' +
+                ", fenlei='" + 产品类型 + '\'' +
                 ", de_term='" + de_term + '\'' +
                 ", de_termUnit='" + de_termUnit + '\'' +
                 ", opn_min_amt='" + opn_min_amt + '\'' +
@@ -164,7 +165,7 @@ public class Product {
                 ", rule='" + rule + '\'' +
                 ", opn_unit_amt='" + opn_unit_amt + '\'' +
                 ", tfr_lmt_type='" + tfr_lmt_type + '\'' +
-                ", draw_adva_flag='" + draw_adva_flag + '\'' +
+                ", draw_adva_flag='" + draw_type + '\'' +
                 ", brNo='" + brNo + '\'' +
                 '}';
     }
@@ -207,5 +208,13 @@ public class Product {
 
     public void setFashouqiUnit(String fashouqiUnit) {
         this.fashouqiUnit = fashouqiUnit;
+    }
+
+    public String get存款类型() {
+        return 存款类型;
+    }
+
+    public void set存款类型(String 存款类型) {
+        this.存款类型 = 存款类型;
     }
 }

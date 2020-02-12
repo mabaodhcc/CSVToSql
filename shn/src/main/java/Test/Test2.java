@@ -7,6 +7,7 @@ import cn.hutool.core.text.csv.CsvRow;
 import cn.hutool.core.text.csv.CsvUtil;
 import cn.hutool.core.util.CharsetUtil;
 import entity.Product;
+import util.MyCSVUtil;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -25,8 +26,9 @@ public class Test2 {
         return rows;
     }
     public static void main(String[] args) {
-        String fileName = "2.csv";
-        List<CsvRow> rows = getData(fileName);
+        String fileName = "十年庆3个.csv";
+
+        List<CsvRow> rows =   MyCSVUtil.getData(fileName);
         rows.remove(0);
         List<Product> products = new ArrayList<>();
         String chnnl;
@@ -34,7 +36,7 @@ public class Test2 {
         String prdtName;
         String prdtNo;
         //        分类
-        String fenlei;
+        String 产品类型;
         //        存款期
         String de_term;
         String de_termUnit;
@@ -64,7 +66,7 @@ public class Test2 {
             prdtName = object[1].toString().trim();
             prdtNo  =object[2].toString().trim();
             gcNo=object[3].toString().trim();
-            fenlei = object[4].toString().trim();
+            产品类型 = object[4].toString().trim();
             de_term = object[5].toString().trim();
             de_termUnit=object[6].toString().trim();
             opn_min_amt = object[7].toString().trim();
@@ -77,12 +79,14 @@ public class Test2 {
             tfr_lmt_type = object[13].toString().trim();
             draw_adva_flag = object[14].toString().trim();
             brNo=object[15].toString().trim();
-            Product product = new Product( chnnl,  prdtName,  prdtNo,  gcNo,  fenlei, de_term, 
+            Product product = new Product( chnnl,  prdtName,  prdtNo,  gcNo,  产品类型, de_term, 
                      de_termUnit,  opn_min_amt,  fashouqi,  fashouqiUnit,  rate,  rule,
                      opn_unit_amt,  tfr_lmt_type, draw_adva_flag,  brNo);
-//            stringBuffer.append(getBaseSql(product));
+            product.set存款类型(object[16].toString().trim());
+            //获得 产品信息的sql
+            stringBuffer.append(getBaseSql(product));
 //            stringBuffer.append(getPRDT_PROX_BR_REL(product));
-            stringBuffer.append(getPRDT_MDM_RELandPRDT_RECO(product));
+//            stringBuffer.append(getPRDT_MDM_RELandPRDT_RECO(product));
         }
         System.out.println(stringBuffer);
     }
@@ -91,8 +95,9 @@ public class Test2 {
         String chnnl=product.getChnnl();
         //        产品名称
         String prdtName=product.getPrdtName();
-        //        分类
-        String fenlei=product.getFenlei();
+        //        产品分类
+        String 产品类型=product.get产品类型();
+        String 存款类型=product.get存款类型();
         //        存款期
         String de_term=product.getDe_term();
         //        最低起存金额
@@ -108,7 +113,12 @@ public class Test2 {
         //        是否可自动转存
         String tfr_lmt_type=product.getTfr_lmt_type();
         //        是否可部分提前支取
-        String draw_adva_flag=product.getDraw_adva_flag();
+        String draw_type=product.getDraw_type();
+//        DE0161	"draw_adva_flag"	"提前支取标志"	"CT02"	"K004"	"PT02"	"0 不能提前支取；[1-9]提前支取次数；-1 不需配置该参数"
+        String draw_adva_flag="0";
+        if(draw_type.equals("DF00")){
+            draw_adva_flag="9";
+        }
         String brNo=product.getBrNo();
         String gcNo=product.getGcNo();
         String prdtNo=product.getPrdtNo();
@@ -128,8 +138,8 @@ public class Test2 {
                 "\n" +
                 "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0002', null, null, '0', null, null, 'PS01', null, null, '"+brNo+"');\n" +
                 "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0003', null, null, 'TT01', null, null, 'PS01', null, null, '"+brNo+"');\n" +
-                "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0004', null, null, 'PK00', null, null, 'PS01', null, null, '"+brNo+"');\n" +
-                "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0005', null, null, 'DE04', null, null, 'PS01', null, null, '"+brNo+"');\n" +
+                "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0004', null, null, '"+产品类型+"', null, null, 'PS01', null, null, '"+brNo+"');\n" +
+                "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0005', null, null, '"+存款类型+"', null, null, 'PS01', null, null, '"+brNo+"');\n" +
                 "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0006', null, null, '"+de_term+"', null, null, 'PS01', null, null, '"+brNo+"');\n" +
                 "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0007', null, null, '"+de_TermUnit+"', null, null, 'PS01', null, null, '"+brNo+"');\n" +
                 "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0008', null, null, 'DI01', null, null, 'PS01', null, null, '"+brNo+"');\n" +
@@ -167,7 +177,7 @@ public class Test2 {
                 "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0158', null, null, 'IT00', null, null, 'PS01', null, null, '"+brNo+"');\n" +
                 "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0159', null, null, 'DC00', null, null, 'PS01', null, null, '"+brNo+"');\n" +
                 "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0160', null, null, 'DT01', null, null, 'PS01', null, null, '"+brNo+"');\n" +
-                "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0161', null, null, '0', null, null, 'PS01', null, null, '"+brNo+"');\n" +
+                "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0161', null, null, '"+draw_adva_flag+"', null, null, 'PS01', null, null, '"+brNo+"');\n" +
                 "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0162', null, null, 'DF01', null, null, 'PS01', null, null, '"+brNo+"');\n" +
                 "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0163', null, null, 'TR00', null, null, 'PS01', null, null, '"+brNo+"');\n" +
                 "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0164', null, null, 'OF00', null, null, 'PS01', null, null, '"+brNo+"');\n" +
@@ -227,10 +237,10 @@ public class Test2 {
                 "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0417', null, null, '1', null, null, 'PS01', null, null, '"+brNo+"');\n" +
                 "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0418', null, null, 'DT02', null, null, 'PS01', null, null, '"+brNo+"');\n" +
                 "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0419', null, null, '"+tfr_lmt_type+"', null, null, 'PS01', null, null, '"+brNo+"');\n" +
-                "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0420', null, null, '"+draw_adva_flag+"', null, null, 'PS01', null, null, '"+brNo+"');\n" +
+                "INSERT INTO PRDT_PARM (PRDT_NO, PARM_NO, PARM_VAL_TYPE, PARM_VAL_MODE, PARM_VAL, PARM_BEG_DATE, PARM_END_DATE, PARM_STS, PARM_DESC, PARM_SHOW, BR_NO) VALUES ('"+prdtNo+"', 'DE0420', null, null, '"+draw_type+"', null, null, 'PS01', null, null, '"+brNo+"');\n" +
                 "INSERT INTO PRDT_BR_REL (PRDT_NO, BR_NO, BEG_DATE, BEG_TIME, END_DATE, END_TIME) VALUES ('"+prdtNo+"', '"+brNo+"', '20190601', '000000', '20990101', '235959');\n"+
-                "INSERT INTO PRDT_RECO (RE_NO, PRDT_CLS, POS_NO, PRDT_NO, DATE_BEG, DATE_END, RECO_WEIG, RE_STS, CRT_USER, CRT_DATE, RECO_TYPE, BR_NO, RECO_ID) VALUES ('2', 'P00034', null, '"+prdtNo+"', , '20170507', '20990507', 2, 'RS00', null, null, 'RT01', '"+brNo+"', '5');\n" +
-                "INSERT INTO PRDT_MDM_REL (PRDT_NO, MDM_CODE, BEG_DATE, BEG_TIME, END_DATE, END_TIME, BR_NO) VALUES ('"+prdtNo+"', 'EM01', '20170304', '000000', '20990101', '235959', '"+prdtNo+"');";
+                "INSERT INTO PRDT_RECO (RE_NO, PRDT_CLS, POS_NO, PRDT_NO, DATE_BEG, DATE_END, RECO_WEIG, RE_STS, CRT_USER, CRT_DATE, RECO_TYPE, BR_NO, RECO_ID) VALUES ('2', 'P00034', null, '"+prdtNo+"' , '20170507', '20990507', 2, 'RS00', null, null, 'RT01', '"+brNo+"', '5');\n" +
+                "INSERT INTO PRDT_MDM_REL (PRDT_NO, MDM_CODE, BEG_DATE, BEG_TIME, END_DATE, END_TIME, BR_NO) VALUES ('"+prdtNo+"', 'EM01', '20170304', '000000', '20990101', '235959', '"+prdtNo+"');\n";
         stringBuffer.append(basesql);
         return stringBuffer;
     }

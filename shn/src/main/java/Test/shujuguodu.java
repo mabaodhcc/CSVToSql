@@ -42,6 +42,7 @@ public class shujuguodu {
         rows.remove(0);
         List<Ecif> ecifs = toEcifList(rows);
 //        String sql = getSQL(ecifs);
+        //电子账户注册信息表sql
         System.out.println(getACCSql(ecifs));
     }
 
