@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e848d03-dc60-448c-83b7-deca8d21407d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/获得介质账户关系表sql.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/模板文件/获得介质账户关系表.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SQL/天山添加十年庆产品类型和存款类型.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SQL/天山添加十年庆产品类型和存款类型.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/方大用户注册sql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/方大用户注册sql.java" afterDir="false" />
-    </list>
+    <list default="true" id="3e848d03-dc60-448c-83b7-deca8d21407d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +185,7 @@
       <workItem from="1581313627742" duration="13866000" />
       <workItem from="1581329109956" duration="760000" />
       <workItem from="1581386043320" duration="12576000" />
-      <workItem from="1581472566163" duration="15192000" />
+      <workItem from="1581472566163" duration="15746000" />
     </task>
     <task id="LOCAL-00001" summary="电子账户de_MST">
       <created>1581329354328</created>
@@ -214,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581491657659</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1.添加介质账户关闭表">
+      <created>1581496775581</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1581496775581</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +238,8 @@
     <MESSAGE value="电子账户de_MST" />
     <MESSAGE value="修改了产品信息表的一些配置，csv文件添加产品存款类型字段，修改了是否支持提前支取的值" />
     <MESSAGE value="1.添加了文件写入功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.添加了文件写入功能" />
+    <MESSAGE value="1.添加介质账户关闭表" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.添加介质账户关闭表" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
