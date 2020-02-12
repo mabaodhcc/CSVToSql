@@ -42,10 +42,9 @@ public class 方大用户注册sql {
         List<CsvRow> rows = MyCSVUtil.getData(fileName);
         rows.remove(0);
         List<Ecif> ecifs = toEcifList(rows);
-//        String sql = getSQL(ecifs);
         //电子账户注册信息表sql
-//        System.out.println(getACCSql(ecifs));
-        MyCSVUtil.writFile(getACCSql(ecifs),fileName);
+        MyCSVUtil.writFile(getSQL(ecifs),fileName);
+//        MyCSVUtil.writFile(getACCSql(ecifs),fileName);
     }
 
     public static String getSQL(List<Ecif> rows) {
@@ -134,7 +133,7 @@ public class 方大用户注册sql {
         }
         return stringBuilder.toString();
     }
-
+//获得介质账户表MDM_ACC_REL的sql
     public static String getACCSql(List<Ecif> rows) {
         StringBuilder stringBuilder = new StringBuilder();
         int start = 41;
@@ -162,4 +161,5 @@ public class 方大用户注册sql {
         }
         return  stringBuilder.toString();
     }
+
 }

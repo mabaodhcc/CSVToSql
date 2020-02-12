@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e848d03-dc60-448c-83b7-deca8d21407d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/SQL/天山添加十年庆产品类型和存款类型.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/使用说明.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/模板文件/十年庆3个.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/模板文件/子账户.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/模板文件/过年前的方大产品配置.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test/获得介质账户关系表sql.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/模板文件/获得介质账户关系表.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/SubAccoutSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/获得子账户sql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/获得方大产品sql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/shujuguodu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/方大用户注册sql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/MyCSVUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/MyCSVUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Test/SubAccoutSQL.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Test/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Test/Test2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Test/shujuguodu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/MyCSVUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/MyCSVUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SQL/天山添加十年庆产品类型和存款类型.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SQL/天山添加十年庆产品类型和存款类型.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test/方大用户注册sql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/方大用户注册sql.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +41,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/SQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/模板文件" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -72,8 +59,8 @@
       <recent name="Test" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\邵海楠-15319109070\shn\src\main\java\SQL" />
       <recent name="E:\邵海楠-15319109070\shn\src\main\java\模板文件" />
+      <recent name="E:\邵海楠-15319109070\shn\src\main\java\SQL" />
       <recent name="E:\shn\src\main\java\Test" />
       <recent name="E:\shn\src\main\java\entity" />
     </key>
@@ -90,7 +77,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.获得子账户sql">
+  <component name="RunManager" selected="Application.获得介质账户关系表sql">
     <configuration name="MyCSVUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="util.MyCSVUtil" />
       <module name="shn" />
@@ -106,19 +93,6 @@
     </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test.Test" />
-      <module name="shn" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="asdasd" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.asdasd" />
       <module name="shn" />
       <extension name="coverage">
         <pattern>
@@ -169,13 +143,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="获得介质账户关系表sql" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.获得介质账户关系表sql" />
+      <module name="shn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.获得子账户sql" />
-        <item itemvalue="Application.获得方大产品sql" />
-        <item itemvalue="Application.MyCSVUtil" />
+        <item itemvalue="Application.获得介质账户关系表sql" />
         <item itemvalue="Application.方大用户注册sql" />
-        <item itemvalue="Application.asdasd" />
+        <item itemvalue="Application.获得方大产品sql" />
+        <item itemvalue="Application.获得子账户sql" />
+        <item itemvalue="Application.MyCSVUtil" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +191,7 @@
       <workItem from="1581313627742" duration="13866000" />
       <workItem from="1581329109956" duration="760000" />
       <workItem from="1581386043320" duration="12576000" />
-      <workItem from="1581472566163" duration="10630000" />
+      <workItem from="1581472566163" duration="15192000" />
     </task>
     <task id="LOCAL-00001" summary="电子账户de_MST">
       <created>1581329354328</created>
@@ -220,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581489270350</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1.添加了文件写入功能">
+      <created>1581491657659</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581491657659</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,7 +236,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="电子账户de_MST" />
     <MESSAGE value="修改了产品信息表的一些配置，csv文件添加产品存款类型字段，修改了是否支持提前支取的值" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了产品信息表的一些配置，csv文件添加产品存款类型字段，修改了是否支持提前支取的值" />
+    <MESSAGE value="1.添加了文件写入功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.添加了文件写入功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -274,8 +269,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Test/方大用户注册sql.java</url>
-          <line>157</line>
+          <line>156</line>
           <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Test/方大用户注册sql.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
