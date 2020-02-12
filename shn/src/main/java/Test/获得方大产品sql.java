@@ -13,7 +13,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Test2 {
+public class 获得方大产品sql {
     public static List<CsvRow> getData(String fileName) {
         String localFile = "C:\\" + fileName;
         File file = FileUtil.file(localFile);
@@ -88,7 +88,8 @@ public class Test2 {
 //            stringBuffer.append(getPRDT_PROX_BR_REL(product));
 //            stringBuffer.append(getPRDT_MDM_RELandPRDT_RECO(product));
         }
-        System.out.println(stringBuffer);
+//        System.out.println(stringBuffer);
+        MyCSVUtil.writFile(stringBuffer.toString(),fileName);
     }
     public static StringBuffer getBaseSql(Product product) {
         StringBuffer stringBuffer = new StringBuffer();

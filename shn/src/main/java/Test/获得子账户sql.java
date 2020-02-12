@@ -8,8 +8,9 @@ import util.MyCSVUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SubAccoutSQL {
+public class 获得子账户sql {
     public static void main(String[] args) {
+        String fileName="子账户.csv";
         List<CsvRow> list =MyCSVUtil.getData("子账户.csv");
         list.remove(0);
         List<SubAccount> subAccounts=toSubAccount(list);
@@ -24,6 +25,7 @@ public class SubAccoutSQL {
             String 账卡号="123";
 //            ACC_SEQN
             String 账户序号=subAccount.get账户序号();
+
             String 合作机构代码="770000";
             String 利率=subAccount.get利率();
             String 起息日期=subAccount.get起息日();
@@ -58,7 +60,8 @@ public class SubAccoutSQL {
             stringBuilder.append(DE_MST);
         }
         //子账户表
-        System.out.println(stringBuilder);
+//        System.out.println(stringBuilder);
+        MyCSVUtil.writFile(stringBuilder.toString(),fileName);
     }
 
     public static List<SubAccount> toSubAccount(List<CsvRow> rows) {

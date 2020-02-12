@@ -7,7 +7,7 @@ import util.MyCSVUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-public class shujuguodu {
+public class 方大用户注册sql {
     public static List<Ecif> toEcifList(List<CsvRow> rows) {
         List<Ecif> ecifs = new ArrayList<>(rows.size());
         for (CsvRow csvRow : rows) {
@@ -38,12 +38,14 @@ public class shujuguodu {
     }
 
     public static void main(String[] args) {
-        List<CsvRow> rows = MyCSVUtil.getData("过渡电子账户部分客户信息.csv");
+        String fileName="过渡电子账户部分客户信息.csv";
+        List<CsvRow> rows = MyCSVUtil.getData(fileName);
         rows.remove(0);
         List<Ecif> ecifs = toEcifList(rows);
 //        String sql = getSQL(ecifs);
         //电子账户注册信息表sql
-        System.out.println(getACCSql(ecifs));
+//        System.out.println(getACCSql(ecifs));
+        MyCSVUtil.writFile(getACCSql(ecifs),fileName);
     }
 
     public static String getSQL(List<Ecif> rows) {
