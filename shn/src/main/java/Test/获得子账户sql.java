@@ -11,7 +11,7 @@ import java.util.List;
 public class 获得子账户sql {
     public static void main(String[] args) {
         String fileName="子账户.csv";
-        List<CsvRow> list =MyCSVUtil.getData("子账户.csv");
+        List<CsvRow> list =MyCSVUtil.getData(fileName);
         list.remove(0);
         List<SubAccount> subAccounts=toSubAccount(list);
         StringBuilder stringBuilder=new StringBuilder();
