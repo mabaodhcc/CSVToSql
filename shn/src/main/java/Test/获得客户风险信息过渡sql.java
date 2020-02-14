@@ -30,12 +30,11 @@ public class 获得客户风险信息过渡sql {
             String 客户名称 = row.get客户名称().trim();
             String 证件号 = row.get证件号().trim();
             String 证件类型=row.get证件类型().trim();
-            String 评估截止日期 = null;
             String 等级描述 = null;
             int 截止日期间隔=184;
             calendar.setTime(df.parse(评估日期));
             calendar.add(Calendar.DATE,截止日期间隔);
-            评估截止日期=df.format(calendar.getTime());
+            String 评估截止日期 =df.format(calendar.getTime());
             if (评估等级.equals("RL00")){
                 等级描述="谨慎型";
             }

@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e848d03-dc60-448c-83b7-deca8d21407d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/jisuan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Test/获得客户风险信息过渡sql.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entity/ECIF_RISK_INFO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/util/DateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test/获得电子账户交易明细.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Test/获得绩效sql.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/JiXiao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entity/TradeDetail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Test/获得子账户sql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/获得子账户sql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Test/获得子账户sql.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Test/获得子账户sql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Test/获得客户风险信息过渡sql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Test/获得客户风险信息过渡sql.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +42,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="E:/core20200111/core" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -79,13 +78,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.获得客户风险信息过渡sql">
-    <configuration name="MyCSVUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="util.MyCSVUtil" />
+  <component name="RunManager" selected="Application.获得绩效sql">
+    <configuration name="获得电子账户交易明细" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.获得电子账户交易明细" />
       <module name="shn" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="util.*" />
+          <option name="PATTERN" value="Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,12 +92,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test.Test" />
+    <configuration name="MyCSVUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="util.MyCSVUtil" />
       <module name="shn" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Test.*" />
+          <option name="PATTERN" value="util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -121,6 +120,19 @@
     </configuration>
     <configuration name="获得方大产品sql" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test.获得方大产品sql" />
+      <module name="shn" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="获得绩效sql" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test.获得绩效sql" />
       <module name="shn" />
       <extension name="coverage">
         <pattern>
@@ -199,7 +211,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.获得客户风险信息过渡sql" />
+        <item itemvalue="Application.获得绩效sql" />
+        <item itemvalue="Application.获得电子账户交易明细" />
         <item itemvalue="Application.jisuan" />
         <item itemvalue="Application.MyCSVUtil" />
         <item itemvalue="Application.获得方大产品sql" />
@@ -233,7 +246,9 @@
       <workItem from="1581386043320" duration="12576000" />
       <workItem from="1581472566163" duration="17087000" />
       <workItem from="1581564213584" duration="8706000" />
-      <workItem from="1581579706272" duration="4555000" />
+      <workItem from="1581579706272" duration="5566000" />
+      <workItem from="1581588343045" duration="87000" />
+      <workItem from="1581645009881" duration="12434000" />
     </task>
     <task id="LOCAL-00001" summary="电子账户de_MST">
       <created>1581329354328</created>
@@ -270,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581497306300</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="1.添加生成客户风险信息过渡功能">
+      <created>1581584389736</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1581584389736</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,7 +316,8 @@
     <MESSAGE value="修改了产品信息表的一些配置，csv文件添加产品存款类型字段，修改了是否支持提前支取的值" />
     <MESSAGE value="1.添加了文件写入功能" />
     <MESSAGE value="1.添加介质账户关闭表" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.添加介质账户关闭表" />
+    <MESSAGE value="1.添加生成客户风险信息过渡功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.添加生成客户风险信息过渡功能" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
