@@ -1,8 +1,8 @@
 package entity;
 
 public class SubAccount {
-    private String 客户号,电子账号,账户序号,产品号,开户时间,起息日,终止日,上次结息日,产品名称,账户余额,冻结状态,冻结金额,止付状态,止付金额,控制金额,利率,积数,最后动账日,累计收益,预计收益,透支标志,开户利率,账户状态,提现标识,签约状态,客户经理,签约日期,开户金额,开户渠道;
-
+    private String 客户号,电子账号,账户序号, 旧的产品号,开户时间,起息日,终止日,上次结息日,产品名称,账户余额,冻结状态,冻结金额,止付状态,止付金额,控制金额,利率,积数,最后动账日,累计收益,预计收益,透支标志,开户利率,账户状态,提现标识,签约状态,客户经理,签约日期,开户金额,开户渠道;
+    private String 现在的产品号;
     public String get客户号() {
         return 客户号;
     }
@@ -27,12 +27,12 @@ public class SubAccount {
         this.账户序号 = 账户序号;
     }
 
-    public String get产品号() {
-        return 产品号;
+    public String get旧的产品号() {
+        return 旧的产品号;
     }
 
-    public void set产品号(String 产品号) {
-        this.产品号 = 产品号;
+    public void set旧的产品号(String 旧的产品号) {
+        this.旧的产品号 = 旧的产品号;
     }
 
     public String get开户时间() {
@@ -239,7 +239,7 @@ public class SubAccount {
         this.客户号 = 客户号;
         this.电子账号 = 电子账号;
         this.账户序号 = 账户序号;
-        this.产品号 = 产品号;
+        this.旧的产品号 = 产品号;
         this.开户时间 = 开户时间;
         this.起息日 = 起息日;
         this.终止日 = 终止日;
@@ -268,5 +268,13 @@ public class SubAccount {
     }
 
     public SubAccount() {
+    }
+
+    public String get现在的产品号() {
+        return 现在的产品号;
+    }
+
+    public void set现在的产品号(String 现在的产品号) {
+        this.现在的产品号 = 现在的产品号;
     }
 }

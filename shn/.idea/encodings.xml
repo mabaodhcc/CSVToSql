@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
-    <file url="file://$PROJECT_DIR$/src/main/java/Test/Test.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/entity/Grade.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/entity/Student.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/模板文件/十年庆3个.csv" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/模板文件/子账户.csv" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/模板文件/获得介质账户关系表.csv" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/模板文件/过年前的方大产品配置.csv" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/产品对照关系表.csv" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/十年庆3个.csv" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/十年庆3个.csv" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/子账户.csv" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/客户信息中间表.csv" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/获得介质账户关系表.csv" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/过年前的方大产品配置.csv" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/过渡电子账户部分客户信息.csv" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

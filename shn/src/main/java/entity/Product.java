@@ -2,10 +2,10 @@ package entity;
 
 public class Product {
 
-    //        渠道
+    //    渠道
     private String chnnl;
 
-    //        产品名称
+    //    产品名称
     private String prdtName;
     private String 存款类型;
     //互金产品编号

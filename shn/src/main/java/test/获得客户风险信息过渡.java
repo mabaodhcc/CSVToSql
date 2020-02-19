@@ -1,35 +1,47 @@
-package Test;
+package test;
 
 import cn.hutool.core.text.csv.CsvRow;
 import entity.ECIF_RISK_INFO;
 import entity.Ecif;
-import util.MyCSVUtil;
+import entity.EcifTemp;
+import util.MyCsvUtil;
+import util.TempDateUtil;
 
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class 获得客户风险信息过渡sql {
+public class 获得客户风险信息过渡 {
     public static void main(String[] args) throws ParseException {
         String fileName="客户风险信息过渡.csv";
-        List<CsvRow> ecifFXRows = MyCSVUtil.getData(fileName);
+        List<CsvRow> ecifFXRows = MyCsvUtil.getData(fileName);
         ecifFXRows.remove(0);
         List<ECIF_RISK_INFO> temp=toECIF_RISK_INFO(ecifFXRows);
        //过滤掉不在过渡电子账户部分客户信息.csv文件中的数据
-        List<ECIF_RISK_INFO> ecif_risk_infos=filter(temp);
+//        List<ECIF_RISK_INFO> ecif_risk_infos=filter(temp);
+        List<EcifTemp> ecifTemps = new ArrayList<>(TempDateUtil.getEcifTemps().values());
 
         StringBuilder stringBuilder=new StringBuilder();
         DateFormat df = new SimpleDateFormat("yyyyMMdd");
         Calendar calendar =Calendar.getInstance();
-        for (ECIF_RISK_INFO row: ecif_risk_infos) {
-            String 客户号,评估日期,评估等级;
-            客户号=row.get客户号().trim();
+        for (ECIF_RISK_INFO row: temp) {
+            String 旧的客户号,评估日期,评估等级,新的客户号;
+            旧的客户号=row.get客户号().trim();
             评估日期=row.get评估日期().trim();
             评估等级=row.get评估等级().trim();
-            String 客户名称 = row.get客户名称().trim();
-            String 证件号 = row.get证件号().trim();
-            String 证件类型=row.get证件类型().trim();
+            Optional<EcifTemp> ecifTempOptional = ecifTemps.stream().filter(p->p.get旧的客户号().equals(旧的客户号)).findFirst();
+            if (!ecifTempOptional.isPresent()){
+                continue;
+            }
+            EcifTemp ecifTemp=ecifTempOptional.get();
+            新的客户号=ecifTemp.get新的客户号();
+            String 客户姓名=ecifTemp.get客户姓名();
+//            String 客户名称 = row.get客户名称().trim();
+            String 证件号=ecifTemp.get证件号();
+//            String 证件号 = row.get证件号().trim();
+            String 证件类型=ecifTemp.get证件类型();
+//            String 证件类型=row.get证件类型().trim();
             String 等级描述 = null;
             int 截止日期间隔=184;
             calendar.setTime(df.parse(评估日期));
@@ -52,11 +64,11 @@ public class 获得客户风险信息过渡sql {
             }
             String 机构号="770000";
             String ECIF_RISK_INFO="INSERT INTO ECIF_RISK_INFO(\"CIF_NO\", \"CIF_NAME\", \"CERT_NO\", \"CERT_TYPE\", \"RISK_DATE\", \"RISK_END_DATE\",\"RISK_LVL\", \"RISK_MO\", \"RISK_DESC\", \"BR_NO\")" +
-                        " VALUES ('"+客户号+"', '"+客户名称+"', '"+证件号+"', '"+证件类型+"', '"+评估日期+"', '"+评估截止日期+"', '"+评估等级+"', '"+等级描述+"', NULL, '"+机构号+"');\n";
+                        " VALUES ('"+新的客户号+"', '"+客户姓名+"', '"+证件号+"', '"+证件类型+"', '"+评估日期+"', '"+评估截止日期+"', '"+评估等级+"', '"+等级描述+"', NULL, '"+机构号+"');\n";
             stringBuilder.append(ECIF_RISK_INFO);
 
         }
-        MyCSVUtil.writFile(stringBuilder.toString(),fileName);
+        MyCsvUtil.writFile(stringBuilder.toString(),fileName);
     }
 
     public static List<ECIF_RISK_INFO> toECIF_RISK_INFO(List<CsvRow> csvRow ) {
@@ -74,11 +86,9 @@ public class 获得客户风险信息过渡sql {
 
     public static List<ECIF_RISK_INFO>  filter(List<ECIF_RISK_INFO> ecif_risk_infos) {
         String ecifsfileName="过渡电子账户部分客户信息.csv";
-        List<CsvRow> ecifsRows = MyCSVUtil.getData(ecifsfileName);
+        List<CsvRow> ecifsRows = MyCsvUtil.getData(ecifsfileName);
         ecifsRows.remove(0);
-        List<Ecif> ecifs=方大用户注册sql.toEcifList(ecifsRows);
-//        List ecifNos=ecifs.stream().map(Ecif::get证件号).collect(Collectors.toList());
-//        List items=ecif_risk_infos.stream().map(ECIF_RISK_INFO::get客户号).collect(Collectors.toList());
+        List<Ecif> ecifs= 用户注册01.toEcifList(ecifsRows);
         Iterator<ECIF_RISK_INFO> iterator = ecif_risk_infos.iterator();
         Set<ECIF_RISK_INFO> datas=new HashSet<ECIF_RISK_INFO>(ecif_risk_infos.size());
         while (iterator.hasNext()) {

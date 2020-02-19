@@ -1,4 +1,4 @@
-package Test;
+package test;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.text.csv.CsvData;
@@ -7,7 +7,7 @@ import cn.hutool.core.text.csv.CsvRow;
 import cn.hutool.core.text.csv.CsvUtil;
 import cn.hutool.core.util.CharsetUtil;
 import entity.Product;
-import util.MyCSVUtil;
+import util.MyCsvUtil;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class 获得方大产品sql {
     public static void main(String[] args) {
         String fileName = "十年庆3个.csv";
 
-        List<CsvRow> rows =   MyCSVUtil.getData(fileName);
+        List<CsvRow> rows =   MyCsvUtil.getData(fileName);
         rows.remove(0);
         List<Product> products = new ArrayList<>();
         String chnnl;
@@ -89,7 +89,7 @@ public class 获得方大产品sql {
 //            stringBuffer.append(getPRDT_MDM_RELandPRDT_RECO(product));
         }
 //        System.out.println(stringBuffer);
-        MyCSVUtil.writFile(stringBuffer.toString(),fileName);
+        MyCsvUtil.writFile(stringBuffer.toString(),fileName);
     }
     public static StringBuffer getBaseSql(Product product) {
         StringBuffer stringBuffer = new StringBuffer();

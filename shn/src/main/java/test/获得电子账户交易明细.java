@@ -1,8 +1,8 @@
-package Test;
+package test;
 
 import cn.hutool.core.text.csv.CsvRow;
 import entity.TradeDetail;
-import util.MyCSVUtil;
+import util.MyCsvUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +10,7 @@ import java.util.List;
 public class 获得电子账户交易明细 {
     public static void main(String[] args) {
         String fileName = "201803.csv";
-        List<CsvRow> rows = MyCSVUtil.getData(fileName);
+        List<CsvRow> rows = MyCsvUtil.getData(fileName);
         rows.remove(0);
         List<TradeDetail> tradeDetails = toTradeDetail(rows);
         StringBuilder stringBuilder = new StringBuilder();
@@ -40,7 +40,7 @@ public class 获得电子账户交易明细 {
             String trade="";
             stringBuilder.append(trade);
         }
-        MyCSVUtil.writFile(stringBuilder.toString(),fileName);
+        MyCsvUtil.writFile(stringBuilder.toString(),fileName);
     }
 
     public static List<TradeDetail> toTradeDetail(List<CsvRow> rows) {
