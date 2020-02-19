@@ -12,7 +12,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class 获得客户风险信息过渡 {
+public class 获得客户风险信息过渡06 {
     public static void main(String[] args) throws ParseException {
         String fileName="客户风险信息过渡.csv";
         List<CsvRow> ecifFXRows = MyCsvUtil.getData(fileName);

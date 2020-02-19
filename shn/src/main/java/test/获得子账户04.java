@@ -30,7 +30,7 @@ public class 获得子账户04 {
             ProductRel productRel=productRels.get(产品名称);
 //            直接从行里提供的csv数据的客户号、电子账户都为旧的客户号，电子账户
             String 旧的客户号 = subAccount.get客户号();
-           Optional<EcifTemp> ecifTempOptional = ecifTemps.parallelStream().filter(p->p.get旧的客户号().equals(旧的客户号)).findFirst();
+           Optional<EcifTemp> ecifTempOptional = ecifTemps.stream().filter(p->p.get旧的客户号().equals(旧的客户号)).findFirst();
             if(productRel==null||!ecifTempOptional.isPresent()){
                 continue;
             }
