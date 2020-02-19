@@ -1,6 +1,0 @@
--- 天山添加十年庆产品类型和存款类型
-INSERT INTO DATA_DIC ("DIC_NO", "DIC_KEY", "DIC_DESC", "DIC_VAL", "DIC_CHILD_NO", "DIC_CHILD_KEY", "DIC_CHILD_VAL", "BR_NO") 
-VALUES ('889', 'PARM_BASE.de_prdt_knd', '产品类型', NULL, '1', 'SNQ01', '十年庆', '9999999999');
-
-INSERT INTO DATA_DIC("DIC_NO", "DIC_KEY", "DIC_DESC", "DIC_VAL", "DIC_CHILD_NO", "DIC_CHILD_KEY", "DIC_CHILD_VAL", "BR_NO")
- VALUES ('888', 'PARM_BASE.de_sub_cls', '存款类型', NULL, '20', 'SNQ02', '十年庆', '850000');

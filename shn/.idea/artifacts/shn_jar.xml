@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="shn:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/shn_jar</output-path>
-    <root id="archive" name="shn.jar">
-      <element id="module-output" name="com.dhcc" />
-      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/cn/hutool/hutool-core/4.6.8/hutool-core-4.6.8.jar" path-in-jar="/" />
-    </root>
-  </artifact>
-</component>

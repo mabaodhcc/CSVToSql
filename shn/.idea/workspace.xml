@@ -2,11 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e848d03-dc60-448c-83b7-deca8d21407d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/constant/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/客户经理关联05.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/客户经理关联05.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/获得子账户04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/获得子账户04.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/获得客户风险信息过渡.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/获得客户风险信息过渡06.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/shn_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/constant/Constant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/AccMangeRel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ECIF_RISK_INFO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Ecif.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/EcifTemp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ProductRel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/SubAccount.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/TradeDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/介质账户关系表02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/客户经理关联05.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/用户注册01.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/获得子账户04.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/获得客户风险信息过渡06.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/获得方大产品sql.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/获得电子账户交易明细.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/MyCsvUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/StringUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/TempDateUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/使用说明.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/天山添加十年庆产品类型和存款类型.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/产品对照关系表.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/十年庆3个.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/子账户.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/客户信息中间表.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/客户风险信息过渡.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/年前产品数据.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/手付通直销数据结构表头.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/手付通直销数据结构表头.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/数据库里的产品关系表.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/新旧产品对照表.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/绩效.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/获得介质账户关系表.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/过渡电子账户部分客户信息.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/shn.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Test/获得方大产品sql.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/Ecif.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/SubAccount.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/MyCSVUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../必看说明.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../必看说明.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +101,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../csvtosql" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -255,7 +301,7 @@
       <workItem from="1581645009881" duration="12434000" />
       <workItem from="1581903617736" duration="13670000" />
       <workItem from="1581990683774" duration="26438000" />
-      <workItem from="1582075302452" duration="8783000" />
+      <workItem from="1582075302452" duration="9460000" />
     </task>
     <task id="LOCAL-00001" summary="电子账户de_MST">
       <created>1581329354328</created>
@@ -306,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582082881415</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="1.修改客户经理关联表（绩效）的产品编号、电子账户为自己方生成的">
+      <created>1582084690327</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1582084690327</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +385,8 @@
     <MESSAGE value="1.添加介质账户关闭表" />
     <MESSAGE value="1.添加生成客户风险信息过渡功能" />
     <MESSAGE value="1.添加生成客户信息中间表和新旧产品对照表功能&#10;2.修复陕萍第一次提出的bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.添加生成客户信息中间表和新旧产品对照表功能&#10;2.修复陕萍第一次提出的bug" />
+    <MESSAGE value="1.修改客户经理关联表（绩效）的产品编号、电子账户为自己方生成的" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.修改客户经理关联表（绩效）的产品编号、电子账户为自己方生成的" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -358,11 +412,6 @@
           <option name="timeStamp" value="36" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/test/介质账户关系表02.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/test/获得子账户04.java</url>
           <line>85</line>
           <option name="timeStamp" value="57" />
@@ -371,11 +420,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/test/获得子账户04.java</url>
           <line>29</line>
           <option name="timeStamp" value="60" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/test/介质账户关系表02.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
